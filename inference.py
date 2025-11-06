@@ -11,7 +11,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # ---- Load Generator ----
 G_model = Generator(LATENT_DIM, NUM_CLASSES, IMG_CHANNELS).to(device)
-G_model.load_state_dict(torch.load("generator_weights.pth", map_location=device))
+G_model.load_state_dict(torch.load("weights/generator_weights.pth", map_location=device))
 G_model.eval()
 
 # ---- Generate images ----

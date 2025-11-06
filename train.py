@@ -95,5 +95,5 @@ def train_cgan():
     return G, D
 
 G_model, D_model = train_cgan()
-torch.save(G_model.state_dict(), "generator_weights.pth")
-torch.save(D_model.state_dict(), "discriminator_weights.pth")
+torch.save(G_model.state_dict(), "weights/generator_weights.pth")
+torch.save(D_model.state_dict(), "weights/discriminator_weights.pth")
